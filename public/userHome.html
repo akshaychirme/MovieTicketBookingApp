@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieTime - HomePage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="logo" style="text-decoration: none">MovieTime</a>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search movies..." />
+      </div>
+      <button class="logout-btn" id="logout-btn">Logout</button>
+    </nav>
+    <h1>User HomePage</h1>
+    <script>
+      // Logout functionality
+      document.getElementById("logout-btn").addEventListener("click", () => {
+        // Clear the token and user details from localStorage
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+
+        // Redirect to login page or home
+        window.location.href = "/"; // Adjust to your desired page
+      });
+    </script>
+  </body>
+</html>

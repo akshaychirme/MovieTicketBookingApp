@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieTime - Book Your Time</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="/" class="logo" style="text-decoration: none">MovieTime</a>
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search movies..." />
+      </div>
+      <button class="login-btn" id="openLoginModal">Login</button>
+    </nav>
+    <div class="container">
+      <h1>Welcome to MovieTime</h1>
+      <p>Find and book tickets for your favorite movies.</p>
+    </div>
+    <!-- Modal for Login  -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeLoginModal">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Enter your email"
+            required
+            autofocus
+          />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+
+        <div class="toggle-form" id="showRegisterForm">
+          New user?
+          <span>Register here</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Registration -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeRegisterModal">&times;</span>
+        <h2>Register</h2>
+        <form id="registerForm">
+          <input
+            type="text"
+            id="registerName"
+            placeholder="Enter your name"
+            required
+            autofocus
+          />
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Enter your password"
+            required
+          />
+          <!-- <select id="userRole" name="role">
+            <option value="user" selected>As a User</option>
+            <option value="admin">As a Admin</option>
+          </select> -->
+          <button type="submit">Register</button>
+        </form>
+        <div class="toggle-form" id="showLoginForm">
+          Already a user? <span> Login here</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
